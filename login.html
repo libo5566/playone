@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="一番賞,Ichiban Kuji">
+    <meta name="description" content="這是一個線上抽一番賞網站">
+    <link href="玩一番/icon/玩一番.ico" rel="shortcut icon"/>
+    <title>玩一番</title>
+    <!-- 重設css -->
+    <link rel="stylesheet" href="reset.css">
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="main-header">
+    <!-- 導覽列 -->
+    <div class="container">
+        <div class="logo">
+        <a href=""><img src="玩一番/LOGO.png" alt="playone"></a>
+        </div>
+        <nav class="main-nav">
+        <a href="index.html">首頁</a>
+        <a href="about-us.html">關於我們</a>
+        <a href="news.html">最新消息</a>
+        <a href="Ichiban.html">一番賞</a>
+        <a href="#">盲盒</a>
+        <a href="#">儲值點數</a>
+        <a href="contact-us.html">聯繫客服</a>
+        </nav>
+        <div class="user-options">
+            <a href="#">註冊</a>
+            <a href="login.html">登入</a>
+        </div>
+    </div>
+    <style>
+        body {
+      background-image: url('玩一番/arches.png'); /* 將 'your-image.jpg' 替換為您想要設置的圖片路徑 */
+    }
+        /* General styling */
+
+        .login {
+            width: 800px;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            position: relative;
+            background-color: aliceblue;
+            box-shadow: 0 0 10px #ccc;
+            border-radius: 10px;
+        }
+        .login-title {
+            text-align: center; /* 标题居中 */
+            margin-bottom: 40px; /* 标题和表格之间的间隔 */
+            font-size: 24px;
+        }
+
+        .form-group {
+            font-size: 15px;
+            font-weight: 300;
+            font-family: 'Noto Sans TC', sans-serif;
+            letter-spacing: 2px;
+            color: #232732;
+            margin-top: 70px;
+            margin-bottom: 70px;
+            width: 520px;
+        }
+
+        /* ----------帳號---------- */
+        .account {
+            margin-bottom: 8px;
+            font-size: 15px;
+            text-align: left;
+            color:#232732;
+            letter-spacing: 3px;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        .account input {
+            box-sizing: border-box;
+            color: rgb(255, 255, 255);
+            width: 100%;
+            height: 50px;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            border: 1px solid gray;
+            margin-bottom: 20px;
+            text-indent: 20px;
+        }
+
+        /* :focus 選擇器調整輸入框在點擊的樣子 */
+        .account input:focus {
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 1px solid #9a0413;
+            box-shadow: 0px 0px 0px 0.5px #870808;
+            transition: border-color 0.3s;
+        }
+
+        /* ----------密碼---------- */
+
+        .passward {
+            margin-bottom: 8px;
+            font-size: 15px;
+            text-align: lefts;
+            color: #232732;
+            letter-spacing: 3px;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        .passward input {
+            box-sizing: border-box;
+            color: rgb(255, 255, 255);
+            width: 100%;
+            height: 50px;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            border: 1px solid gray;
+            margin-bottom: 20px;
+            text-indent: 20px;
+        }
+
+        /* :focus 選擇器調整輸入框在點擊的樣子 */
+        .passward input:focus {
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 1px solid #ac0715;
+            box-shadow: 0px 0px 0px 0.5px #b80202;
+            transition: border-color 0.3s;
+        }
+
+        /* ----------驗證碼---------- */
+        .check {
+            margin-bottom: 8px;
+            font-size: 15px;
+            text-align: lefts;
+            color: #232732;
+            letter-spacing: 3px;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        .check input {
+            box-sizing: border-box;
+            color: rgb(255, 255, 255);
+            width: 100%;
+            height: 50px;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            border: 1px solid gray;
+            margin-bottom: 20px;
+            text-indent: 20px;
+        }
+
+        /* :focus 選擇器調整輸入框在點擊的樣子 */
+        .check input:focus {
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgb(241, 1, 1);
+            box-shadow: 0px 0px 0px 0.5px rgb(241, 1, 1);
+            transition: border-color 0.3s;
+        }
+
+        /* ----------按鈕區---------- */
+        .lofin-btn-group {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 20px;
+            width: 520px;
+        }
+
+        button {
+            all: unset;
+            text-align: center;
+            width: 100%;
+        }
+
+        .login-btn-group a {
+            text-decoration: none;
+        }
+
+        .login-btn-up,
+        .login-btn-up-phone {
+            border: 1px solid #ff6b00;
+            background-color: rgb(241, 1, 1);
+            transition: .5s ease-in-out;
+            color: #232732;
+            padding: 15px 20px;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .login-btn-up{
+            color: white;
+        }
+
+        .login-btn-group a .login-btn-up-phone {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid transparent;
+        }
+
+        .login-btn-up:hover,
+        .login-btn-up-phone:hover {
+            border: 1px solid rgb(241, 1, 1);
+            background-color: rgb(241, 1, 1);
+        }
+
+        .login-btn-bottom {
+            width: 520px;
+            display: flex;
+            align-content: space-between;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* 或 */
+
+        .orLineGroup {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 520px;
+        }
+
+        .orLine {
+            width: 240px;
+            height: 1px;
+            background-color:#232732;
+
+        }
+
+
+
+        /* 使用手機號碼登入/ 忘記密碼/註冊新帳號*/
+
+
+        .forget {
+            display: flex;
+            align-items: baseline;
+            align-content: space-between;
+            width: 100%;
+        }
+
+        .forget div a {
+            color: #232732;
+        }
+
+        .forget div:first-child {
+            box-sizing: border-box;
+            width: 100%;
+            text-align: start;
+            letter-spacing: 2px;
+        }
+
+        .forget div:last-child {
+            box-sizing: border-box;
+            width: 150px;
+            text-align: end;
+        }
+    </style>
+</header>
+<main>
+    <div class="login">
+        <div class="form-group">
+                <div class="login-title"><span>會員登入</span></div>
+                <div class="account">
+                    <label for="username">會員帳號</label>
+                </div>
+                <div class="account">
+                    <input type="text" name="username" required="">
+                </div>
+                <div class="passward">
+                    <label for="password">會員密碼</label>
+                </div>
+                <div class="passward">
+                    <input type="password" name="password" required="">
+                </div>
+                <!-- ----------驗證碼---------- -->
+                <div class="check">
+                    <label for="password">驗證碼</label>
+                </div>
+                <div class="check">
+                    <input type="password" name="password" required="">
+                </div>
+                <!-- ----------按鈕---------- -->
+                <div class="login-btn-group">
+                    <div>
+                        <button class="login-btn-group-btn">
+                            <div class="login-btn-up">
+                                <span>登入</span>
+                            </div>
+                        </button>
+                    </div>
+                    <!-- ----------或---------- -->
+                    <div class="orLineGroup">
+                        <div class="orLine"></div>
+                        <div class="or">或</div>
+                        <div class="orLine"></div>
+                    </div>
+                    <!-- ----------按鈕---------- -->
+                    <div>
+                        <a href="#">
+                            <div class="login-btn-up-phone">
+                                <span>使用其他方式登入</span>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- ----------忘記密碼---------- -->
+                    <div class="forget">
+                        <div><a href="#">忘記密碼</a></div>
+                        <div><a href="#">註冊</a></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+</main>
+<footer>
+    <div class="footer-container">
+        <a href="#" class="back-to-top">Back to top</a>
+        <div class="logo-area">
+        <img src="玩一番/LOGO.png" alt="playone">
+    </div>
+    <div class="contact-info">
+        <p class="element-TEL">
+        地址：玩一番股份有限公司 桃園市中壢區復興路46號9樓<br>
+        TEL: 02-222-5978 ｜ FAX: 02-666-5978<br>
+        copyright©2024PLAY ONE 玩一番 . All rights reserved.<br>
+    </p>
+    </div>
+    <div class="social-icons">
+        <a href="#" class="icon-link"><img src="玩一番/icon/fb.ico" alt=""></a>
+        <a href="#" class="icon-link"><img src="玩一番/icon/ig.ico" alt=""></a>
+        <a href="#" class="icon-link"><img src="玩一番/icon/mail.ico" alt=""></a>
+        <a href="#" class="icon-link"><img src="玩一番/icon/yt.ico" alt=""></a>
+    </div>
+    </div>
+    <div class="credits">
+    <div class="overlap-group-2">
+        <div class="text-wrapper-1">參考資料來源: | Pinterest:https://www.pinterest.com/</div>
+        <div class="text-wrapper-2">
+            本網站為緯育TibaMe前端工程師班第xx期學員專題作品，本平台僅供學習、展示之用。
+        </div>
+    </div>
+    </div>
+</footer>
+</body>
+</html>

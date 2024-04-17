@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="一番賞,Ichiban Kuji">
+    <meta name="description" content="這是一個線上抽一番賞網站">
+    <link href="玩一番/icon/玩一番.ico" rel="shortcut icon"/>
+    <title>玩一番</title>
+    <!-- 重設css -->
+    <link rel="stylesheet" href="reset.css">
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="main-header">
+    <!-- 導覽列 -->
+    <div class="container">
+        <div class="logo">
+        <a href=""><img src="玩一番/LOGO.png" alt="playone"></a>
+        </div>
+        <nav class="main-nav">
+        <a href="index.html">首頁</a>
+        <a href="about-us.html">關於我們</a>
+        <a href="news.html">最新消息</a>
+        <a href="Ichiban.html">一番賞</a>
+        <a href="#">盲盒</a>
+        <a href="#">儲值點數</a>
+        <a href="contact-us.html">聯繫客服</a>
+        </nav>
+        <div class="user-options">
+            <a href="#">註冊</a>
+            <a href="login.html">登入</a>
+        </div>
+    </div>
+    <style>
+
+    .product-wrapper{
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }    
+    .product-image img {
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .product-details {
+        font-family:'Noto Sans TC', sans-serif;
+        background-color:#f9f9f9;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 700px;
+        width: 100%;
+    }
+    .info-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* 根据需要调整间距 */
+}
+
+.shop-name, .price {
+    margin: 0; /* 移除默认的 margin */
+}
+
+    .product-title h2{
+        color:#232732 ;
+        font-size: 36px;
+        text-align: center;
+        background-color: #e71c30;
+        color: white;
+    }
+    .prize-details{
+        display: flex;
+        flex-direction:row;
+        justify-content: flex-start;
+    }
+    .prize-details div{
+        margin: 0 10px;
+        font-size: 16px;
+        color: #232732;
+    }
+    .product-details .shop-name{
+        font-size: 18px;
+        color:#e8554e;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: start;
+    }
+    .product-details .description{
+        font-size: 16px;
+        color: #232732;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        text-align: start;
+    }
+    .product-details .price{
+        font-size: 18px;
+        color: #e8554e;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align:start;
+    }
+    .description {
+        max-width: 800px;
+    }
+    .purchase-options{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        max-width:700px ;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .list1{
+        display: flex;
+        justify-content: space-between;
+        width: 700px;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .remaining-draws {
+        margin-right: 20px;
+        font-size: 16px;
+        color: #232732;
+    }
+    .purchase-options button {
+        background-color: #e71c30 ;
+        color: white;
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease-in-out;
+        border: none;
+    }
+    .purchase-options button:hover {
+        background-color: #232732;
+    }
+    .central-button {
+    display: flex;
+    justify-content: center;
+    width: 100%;  /* 使得按钮容器宽度与父容器相同 */
+    margin-top: 20px; /* 添加一些上边距以与其他内容区分 */
+    }
+    .prize-details {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #232732;
+    letter-spacing: 2px;
+}
+.central-button button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #e71c30;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.central-button button:hover {
+    background-color: #232732;
+}
+/* 下方賞品區塊 */
+.product-content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.product-content h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 24px;
+}
+
+.prize {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%; /* 根据实际需要调整 */
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc; /* 輕微的邊框美化 */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* 轻微阴影 */
+    background-color: white;
+    min-height: 400px;
+    text-align: center;
+}
+
+.prize img {
+    width: 100%; /* 图片宽度自适应容器 */
+    height: auto; /* 图片高度自适应 */
+    margin-bottom: 10px;
+}
+
+.prize h4 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.prize p {
+    font-size: 14px;
+    color: #666;
+}
+/* footer button */
+.footer-button{
+    display: flex;
+    flex-direction:column;
+}
+.footer-button button{
+    margin: 10px;
+}
+.back-button button{
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color:white;
+    color:#232732;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    border: 1px solid#232732;
+}
+    </style>
+</header>
+<main>
+<body>
+    <main>
+        <div class="product-wrapper">
+            <div class="product-image-wrapper">
+                <div class="product-image">
+                    <img src="玩一番/航海王-新四皇/海賊王一番賞新四皇.jpg" alt="航海王新四皇">
+                </div>
+                <div class="product-title">
+                    <h2>商品名稱:ONE PIECE航海王 新四皇</h2>
+                </div>   
+            </div>
+            <div class="product-details">
+                <div class="info-bar">
+                    <p class="shop-name">店家名稱:差低玩具</p>
+                    <p class="price">價格:1抽305/3抽1000/10抽2900</p>
+                </div>
+                <p class="description">
+                    注意事項:<br>
+                    單抽開獎保護200秒，多抽一次+20秒(x抽數)，抽五抽=300秒(以此類推)，保護上限600秒。<br>
+                    下單前須知：<br>
+                    一番賞、盲盒商品為「線上機率型」商品，<br>
+                    一但完成抽獎程序，將無法「退貨及退款」！無法接受請勿消費!<br>
+                    除非有品質瑕疵，因此在收到「商品拆封」時，請「全程綠影」以保護雙方權益。<br>
+                    盒況若有明顯損傷會事先告知，若顧客對於盒況有相當高的要求(八角、無損等)，<br>
+                    建議考慮過後再行消費！<br>
+                    消費前請「務必」確認我們的消費規範再進行購買，謝謝！</p>
+            </div>
+            <div class="purchase-options">
+                <div class="list1">
+                    <div class="remaining-draws">
+                        剩餘抽數/總抽數: (78/78)
+                    </div>
+                    <div>
+                        <button type="button">剩餘全包</button>
+                    </div>
+                </div>
+                <div class="prize-details">
+                    <div>A賞<br>(3/3)</div>
+                    <div>B賞<br>(2/2)</div>
+                    <div>D賞<br>(2/2)</div>
+                    <div>C賞<br>(2/2)</div>
+                    <div>E賞<br>(1/1)</div>
+                    <div>F賞<br>(20/20)</div>
+                    <div>G賞<br>(20/20)</div>
+                    <div>H賞<br>(20/20)</div>
+                    <div>I賞<br>(20/20)</div>
+                </div>
+                <div class="central-button">
+                    <button type="button">開始抽賞</button>
+                </div>
+            </div>
+            <div class="product-content">
+                <h3>賞品一覽</h3>
+                <div class="prize" id="prize-A">
+                    <img src="玩一番/航海王-新四皇/A賞 四皇 傑克 MASTERLISE EXPIECE.jpg" alt="A賞">
+                    <h4>A賞 四皇 傑克<br> MASTERLISE EXPIECE</h4>
+                    <p>剩餘數量/總數量:3/3</p>
+                </div>
+                <div class="prize" id="prize-B">
+                    <img src="玩一番/航海王-新四皇/B賞 四皇 馬歇爾・D・汀奇 MASTERLISE EXPIECE.jpg" alt="B賞">
+                    <h4>B賞 四皇 馬歇爾・D・汀奇<br>MASTERLISE EXPIECE</h4>
+                    <p>剩餘數量/總數量:2/2</p>
+                </div>
+                <div class="prize" id="prize-C">
+                    <img src="玩一番/航海王-新四皇/C賞 四皇 蒙其・D・魯夫 MASTERLISE EXPIECE.jpg" alt="C賞">
+                    <h4>C賞 四皇 蒙奇·D·魯夫<br> MASTERLISE EXPIECE</h4>
+                    <p>剩餘數量/總數量:2/2</p>
+                </div>
+                <div class="prize" id="prize-D">
+                    <img src="玩一番/航海王-新四皇/D賞 四皇 巴奇 MASTERLISE EXPIECE.jpg" alt="D賞">
+                    <h4>D賞 四皇小丑巴奇<br> MASTERLISE EXPIECE</h4>
+                    <p>剩餘數量/總數量:2/2</p>
+                </div>
+                <div class="prize" id="prize-E">
+                    <img src="玩一番/航海王-新四皇/E賞 托特包.jpg" alt="E賞">
+                    <h4>四皇圖案 托特包</h4>
+                    <p>剩餘數量/總數量:1/1</p>
+                </div>
+                <div class="prize" id="prize-F">
+                    <img src="玩一番/航海王-新四皇/F賞 毛巾收藏.jpg" alt="F賞">
+                    <h4>四皇圖案 長短毛巾</h4>
+                    <p>剩餘數量/總數量:20/20</p>
+                </div>
+                <div class="prize" id="prize-G">
+                    <img src="玩一番/航海王-新四皇/G賞 壓克力吊飾.jpg" alt="G賞">
+                    <h4>四皇圖案 壓克力吊飾</h4>
+                    <p>剩餘數量/總數量:20/20</p>
+                </div>
+                <div class="prize" id="prize-H">
+                    <img src="玩一番/航海王-新四皇/H賞 資料夾貼紙套組.jpg" alt="H賞">
+                    <h4>四皇造型 透明文件夾&貼紙&票卡盒</h4>
+                    <p>剩餘數量/總數量:20/20</p>
+                </div>
+                <div class="prize" id="prize-I">
+                    <img src="玩一番/航海王-新四皇/I賞 橡膠收藏.jpg" alt="I賞">
+                    <h4>四皇造型 塑膠磁鐵/束帶/杯墊</h4>
+                    <p>剩餘數量/總數量:20/20</p>
+                </div>
+                <div class="prize" id="prize-Last">
+                    <img src="玩一番/航海王-新四皇/新四皇最後賞.jpg" alt="Last賞">
+                    <h4>魯夫 MASTERLISE EXPIECE<br> 最後賞ver.</h4>
+                    <p>剩餘數量/總數量:1/1</p>
+                </div>
+            </div>
+            <div class="footer-button">
+                <div class="central-button">
+                    <button type="button">開始抽賞</button>
+                </div>
+                <div class="back-button">
+                    <button type="button" onclick="window.history.back()"> < 返回一番賞
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+</main>
+<footer>
+    <div class="footer-container">
+        <a href="#" class="back-to-top">Back to top</a>
+        <div class="logo-area">
+        <img src="玩一番/LOGO.png" alt="playone">
+    </div>
+    <div class="contact-info">
+        <p class="element-TEL">
+        地址：玩一番股份有限公司 桃園市中壢區復興路46號9樓<br>
+        TEL: 02-222-5978 ｜ FAX: 02-666-5978<br>
+        copyright©2024PLAY ONE 玩一番 . All rights reserved.<br>
+    </p>
+    </div>
+    <div class="social-icons">
+        <a href="#" class="icon-link"><img src="玩一番/icon/fb.ico" alt=""></a>
+        <a href="#" class="icon-link"><img src="玩一番/icon/ig.ico" alt=""></a>
+        <a href="#" class="icon-link"><img src="玩一番/icon/mail.ico" alt=""></a>
+        <a href="#" class="icon-link"><img src="玩一番/icon/yt.ico" alt=""></a>
+    </div>
+    </div>
+    <div class="credits">
+    <div class="overlap-group-2">
+        <div class="text-wrapper-1">參考資料來源: | Pinterest:https://www.pinterest.com/</div>
+        <div class="text-wrapper-2">
+            本網站為緯育TibaMe前端工程師班第xx期學員專題作品，本平台僅供學習、展示之用。
+        </div>
+    </div>
+    </div>
+</footer>
+</body>
+</html>

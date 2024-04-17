@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="一番賞,Ichiban Kuji">
+    <meta name="description" content="這是一個線上抽一番賞網站">
+    <link href="玩一番/icon/玩一番.ico" rel="shortcut icon"/>
+    <title>玩一番</title>
+    <!-- 重設css -->
+    <link rel="stylesheet" href="reset.css">
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleguide.css">
+    <style>
+        body {
+      background-image: url('玩一番/arches.png'); /* 將 'your-image.jpg' 替換為您想要設置的圖片路徑 */
+    }
+    .ichiban-card-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.ichiban-card-container:hover .ichiban-image-block img {
+  transform: scale(1.2); /* 放大图片 */
+}
+
+.ichiban-image-block img {
+  transition: transform 0.3s ease; /* 添加过渡效果 */
+}
+    </style>
+</head>
+<body>
+<header class="main-header">
+    <!-- 導覽列 -->
+    <div class="container">
+        <div class="logo">
+        <a href=""><img src="玩一番/LOGO.png" alt="playone"></a>
+        </div>
+        <nav class="main-nav">
+        <a href="index.html">首頁</a>
+        <a href="about-us.html">關於我們</a>
+        <a href="news.html">最新消息</a>
+        <a href="Ichiban.html">一番賞</a>
+        <a href="#">盲盒</a>
+        <a href="#">儲值點數</a>
+        <a href="contact-us.html">聯繫客服</a>
+        </nav>
+        <div class="user-options">
+            <a href="#">註冊</a>
+            <a href="login.html">登入</a>
+        </div>
+    </div>
+</header>
+<main class="main-ichiban">
+    <div class="ichiban-title">
+        <h2>玩一番</h2>
+        <input type="text" placeholder="搜尋一番" class="search-box">
+    </div>
+    <div class="ichiban-button-group">
+        <button class="choice-button">一番賞</button>
+        <button class="choice-button">自製賞</button>
+        <button class="choice-button">福利賞</button>
+    </div>
+        <div class="ichiban-card-shop-container">
+        <div class="ichiban-card-shop">
+            <div class="ichiban-card-container" data-url="onepiece.html">
+            <div class="ichiban-label-block">
+                多抽優惠!
+            </div>
+            <div class="ichiban-image-block">
+            <img src="玩一番/航海王-新四皇/海賊王一番賞新四皇.jpg" alt="商品圖片">
+            </div>
+            <div class="ichiban-text-block">
+                <div class="ichiban-content-block">
+                產品名:<br>
+                ONE PIECE航海王-<br>
+                新四皇
+                </div>
+                <div class="ichiban-content-block">
+                店家名:差低玩具
+                </div>
+                <div class="ichiban-content-block">
+                價格:1抽305元
+            </div>
+            </div>
+            </div>
+            <div class="ichiban-card-container">
+            <div class="ichiban-label-block">
+                多抽優惠!
+            </div>
+            <div class="ichiban-image-block">
+                <img src="玩一番/一番賞 JOJO的奇妙冒險DIAMOND IS UNBREAKABLE/170790989322_1200.jpg" alt="商品圖片">
+            </div>
+            <div class="ichiban-text-block">
+                <div class="ichiban-content-block">
+                產品名:<br>
+                JOJO的奇妙冒險-<br>
+                DIAMOND IS UNBREAKABLE<br>
+                </div>
+                <div class="ichiban-content-block">
+                店家名:虧賊玩具
+                </div>
+                <div class="ichiban-content-block">
+                價格:1抽300元
+            </div>
+            </div>
+            </div>
+            <div class="ichiban-card-container">
+            <div class="ichiban-label-block">
+                多抽優惠!
+            </div>
+            <div class="ichiban-image-block">
+                <img src="玩一番/JOJO的奇妙冒險 STARDUST CRUSADERS/JOJO一番上.jpg" alt="商品圖片">
+            </div>
+            <div class="ichiban-text-block">
+                <div class="ichiban-content-block">
+                產品名:<br>
+                JOJO的奇妙冒險-<br>
+                STARDUST CRUSADERS<br>
+                </div>
+                <div class="ichiban-content-block">
+                店家名:點點玩具
+                </div>
+                <div class="ichiban-content-block">
+                價格:1抽350元
+            </div>
+            </div>
+
+            </div>
+        </div>
+        <div class="ichiban-card-shop">
+            <div class="ichiban-card-container">
+            <div class="ichiban-label-block">
+                多抽優惠!
+            </div>
+            <div class="ichiban-image-block">
+            <img src="玩一番/一番賞 咒術迴戰 懷玉・玉折～參～/170900695984_1200.jpg" alt="商品圖片">
+            </div>
+            <div class="ichiban-text-block">
+                <div class="ichiban-content-block">
+                產品名:<br>
+                咒術迴戰 懷玉・玉折<br>～參～
+                </div>
+                <div class="ichiban-content-block">
+                店家名:虧賊玩具
+                </div>
+                <div class="ichiban-content-block">
+                價格:1抽300元
+            </div>
+            </div>
+            </div>
+            <div class="ichiban-card-container">
+            <div class="ichiban-label-block">
+                多抽優惠!
+            </div>
+            <div class="ichiban-image-block">
+                <img src="玩一番/HUNTER×HUNTER 獵人 REVENGE OF SCARLET/170899749418_1200.jpg" alt="商品圖片">
+            </div>
+            <div class="ichiban-text-block">
+                <div class="ichiban-content-block">
+                產品名:<br>
+                HUNTER×HUNTER 獵人<br>
+                REVENGE OF SCARLET
+                </div>
+                <div class="ichiban-content-block">
+                店家名:虧賊玩具
+                </div>
+                <div class="ichiban-content-block">
+                價格:1抽300元
+            </div>
+            </div>
+            </div>
+            <div class="ichiban-card-container">
+            <div class="ichiban-label-block">
+                多抽優惠!
+            </div>
+            <div class="ichiban-image-block">
+                <img src="玩一番/我的英雄學院-兩個人的傾慕/我英.jpg" alt="商品圖片">
+            </div>
+            <div class="ichiban-text-block">
+                <div class="ichiban-content-block">
+                產品名:<br>
+                我的英雄學院-<br>
+                兩個人的傾慕
+                </div>
+                <div class="ichiban-content-block">
+                店家名:虧賊玩具
+                </div>
+                <div class="ichiban-content-block">
+                價格:1抽300元
+            </div>
+            </div>
+
+            </div>
+        </div>
+        <div class="ichiban-card-shop">
+            <div class="ichiban-card-container" data-url="onepiece.html">
+            <div class="ichiban-label-block">
+                多抽優惠!
+            </div>
+            <div class="ichiban-image-block">
+            <img src="玩一番/航海王-新四皇/海賊王一番賞新四皇.jpg" alt="商品圖片">
+            </div>
+            <div class="ichiban-text-block">
+                <div class="ichiban-content-block">
+                產品名:<br>
+                ONE PIECE航海王-<br>
+                新四皇
+                </div>
+                <div class="ichiban-content-block">
+                店家名:差低玩具
+                </div>
+                <div class="ichiban-content-block">
+                價格:1抽305元
+            </div>
+            </div>
+            </div>
+            <div class="ichiban-card-container">
+            <div class="ichiban-label-block">
+                多抽優惠!
+            </div>
+            <div class="ichiban-image-block">
+                <img src="玩一番/一番賞 JOJO的奇妙冒險DIAMOND IS UNBREAKABLE/170790989322_1200.jpg" alt="商品圖片">
+            </div>
+            <div class="ichiban-text-block">
+                <div class="ichiban-content-block">
+                產品名:<br>
+                JOJO的奇妙冒險-<br>
+                DIAMOND IS UNBREAKABLE<br>
+                </div>
+                <div class="ichiban-content-block">
+                店家名:虧賊玩具
+                </div>
+                <div class="ichiban-content-block">
+                價格:1抽300元
+            </div>
+            </div>
+            </div>
+            <div class="ichiban-card-container">
+            <div class="ichiban-label-block">
+                多抽優惠!
+            </div>
+            <div class="ichiban-image-block">
+                <img src="玩一番/JOJO的奇妙冒險 STARDUST CRUSADERS/JOJO一番上.jpg" alt="商品圖片">
+            </div>
+            <div class="ichiban-text-block">
+                <div class="ichiban-content-block">
+                產品名:<br>
+                JOJO的奇妙冒險-<br>
+                STARDUST CRUSADERS<br>
+                </div>
+                <div class="ichiban-content-block">
+                店家名:點點玩具
+                </div>
+                <div class="ichiban-content-block">
+                價格:1抽350元
+            </div>
+            </div>
+
+            </div>
+        </div>
+        <div class="ichiban-card-shop">
+            <div class="ichiban-card-container">
+            <div class="ichiban-label-block">
+                多抽優惠!
+            </div>
+            <div class="ichiban-image-block">
+            <img src="玩一番/一番賞 咒術迴戰 懷玉・玉折～參～/170900695984_1200.jpg" alt="商品圖片">
+            </div>
+            <div class="ichiban-text-block">
+                <div class="ichiban-content-block">
+                產品名:<br>
+                咒術迴戰 懷玉・玉折<br>～參～
+                </div>
+                <div class="ichiban-content-block">
+                店家名:虧賊玩具
+                </div>
+                <div class="ichiban-content-block">
+                價格:1抽300元
+            </div>
+            </div>
+            </div>
+            <div class="ichiban-card-container">
+            <div class="ichiban-label-block">
+                多抽優惠!
+            </div>
+            <div class="ichiban-image-block">
+                <img src="玩一番/HUNTER×HUNTER 獵人 REVENGE OF SCARLET/170899749418_1200.jpg" alt="商品圖片">
+            </div>
+            <div class="ichiban-text-block">
+                <div class="ichiban-content-block">
+                產品名:<br>
+                HUNTER×HUNTER 獵人<br>
+                REVENGE OF SCARLET
+                </div>
+                <div class="ichiban-content-block">
+                店家名:虧賊玩具
+                </div>
+                <div class="ichiban-content-block">
+                價格:1抽300元
+            </div>
+            </div>
+            </div>
+            <div class="ichiban-card-container">
+            <div class="ichiban-label-block">
+                多抽優惠!
+            </div>
+            <div class="ichiban-image-block">
+                <img src="玩一番/我的英雄學院-兩個人的傾慕/我英.jpg" alt="商品圖片">
+            </div>
+            <div class="ichiban-text-block">
+                <div class="ichiban-content-block">
+                產品名:<br>
+                我的英雄學院-<br>
+                兩個人的傾慕
+                </div>
+                <div class="ichiban-content-block">
+                店家名:虧賊玩具
+                </div>
+                <div class="ichiban-content-block">
+                價格:1抽300元
+            </div>
+            </div>
+
+            </div>
+        </div>
+        <div class="news-pagination">
+            <div class="page active">1</div><!-- 当前页添加 active 类来显示特殊颜色 -->
+            <div class="page">2</div>
+            <div class="page">3</div> 
+        </div>
+        </div>
+        <script>
+            //點擊事件
+    document.addEventListener("DOMContentLoaded", function() {
+  // 獲取所有的 card-container 元素
+var cards = document.querySelectorAll('.ichiban-card-container');
+
+  // 為每個 card-container 添加點擊事件
+cards.forEach(function(card) {
+    card.addEventListener('click', function() {
+      // 從 data-url 屬性獲取 URL
+    var url = card.getAttribute('data-url');
+      // 跳轉到指定的 URL
+    if (url) {
+        window.location.href = url;
+    }
+    });
+});
+});
+        </script>
+</main>
+<footer>
+    <div class="footer-container">
+        <a href="#" class="back-to-top">Back to top</a>
+        <div class="logo-area">
+        <img src="玩一番/LOGO.png" alt="playone">
+    </div>
+    <div class="contact-info">
+        <p class="element-TEL">
+        地址：玩一番股份有限公司 桃園市中壢區復興路46號9樓<br>
+        TEL: 02-222-5978 ｜ FAX: 02-666-5978<br>
+        copyright©2024PLAY ONE 玩一番 . All rights reserved.<br>
+    </p>
+    </div>
+    <div class="social-icons">
+        <a href="#" class="icon-link"><img src="玩一番/icon/fb.ico" alt=""></a>
+        <a href="#" class="icon-link"><img src="玩一番/icon/ig.ico" alt=""></a>
+        <a href="#" class="icon-link"><img src="玩一番/icon/mail.ico" alt=""></a>
+        <a href="#" class="icon-link"><img src="玩一番/icon/yt.ico" alt=""></a>
+    </div>
+    </div>
+    <div class="credits">
+    <div class="overlap-group-2">
+        <div class="text-wrapper-1">參考資料來源: | Pinterest:https://www.pinterest.com/</div>
+        <div class="text-wrapper-2">
+            本網站為緯育TibaMe前端工程師班第xx期學員專題作品，本平台僅供學習、展示之用。
+        </div>
+    </div>
+    </div>
+</footer>
+</body>
+</html>

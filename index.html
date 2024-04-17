@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="一番賞,Ichiban Kuji">
+    <meta name="description" content="這是一個線上抽一番賞網站">
+    <link href="玩一番/icon/玩一番.ico" rel="shortcut icon"/>
+    <title>玩一番</title>
+    <!-- 重設css -->
+    <link rel="stylesheet" href="reset.css">
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleguide.css">
+    <style>
+
+    .card-container img {
+      width: 100%; 
+      height: 100%; 
+    }
+    .card-container .img-block {
+      width: 300px;
+      height: 300px;
+    }
+    .card-container {
+    position: relative;
+  }
+
+  .image-block img {
+    transition: transform 0.3s;
+  }
+
+  .card-container:hover .image-block img {
+    transform: scale(1.2);
+  }
+
+  .image-block {
+    overflow: hidden;
+  }
+    </style>
+</head>
+<body>
+  <header class="main-header">
+    <!-- 導覽列 -->
+    <div class="container">
+        <div class="logo">
+          <a href=""><img src="玩一番/LOGO.png" alt="playone"></a>
+        </div>
+        <nav class="main-nav">
+          <a href="index.html">首頁</a>
+          <a href="about-us.html">關於我們</a>
+          <a href="news.html">最新消息</a>
+          <a href="Ichiban.html">一番賞</a>
+          <a href="#">盲盒</a>
+          <a href="#">儲值點數</a>
+          <a href="contact-us.html">聯繫客服</a>
+        </nav>
+        <!-- 搜尋欄 -->
+        <!-- <form class="header-search">
+          <input type="search" name="" id="">
+          <button></button>
+        </form> -->
+        <div class="user-options">
+            <a href="#">註冊</a>
+            <a href="login.html">登入</a>
+        </div>
+    </div>
+  </header>
+  <main>
+      <!-- 在這裡放置網頁主要內容，例如抽獎資訊、產品展示等 -->
+      <div class="title">
+        <img src="玩一番/sega.jpg" alt="">
+        <div class="title-content">
+          玩一番為您提供<br>
+          最新、最快、最透明的抽賞體驗!
+        </div>
+        <div>
+          <a href="#" class="explore-button"onclick="window.location.href='Ichiban.html'">立即探索</a>
+        </div>
+      </div>
+      <div class="image-slider-container">
+        <div class="image-slider">
+          <div class="slider-images">
+            <img src="玩一番/航海王-新四皇/海賊王一番賞新四皇.jpg" alt="Image 1">
+            <img src="玩一番/航海王-絕對的正義/絕對的正義.jpg" alt="Image 2">
+            <img src="玩一番/我的英雄學院-兩個人的傾慕/我英.jpg" alt="Image 3">
+            <!-- 添加更多图片 -->
+          </div>
+      </div>
+        <div class="slide-controls">
+          <button class="prev" onclick="prevSlide()">&#10094;</button>
+          <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+      </div>
+    </div>
+      <!-- 網頁內容 -->
+      <div class="newsticker-1">
+        <div class="newsticker-content">
+          <div class="marquee-text">
+            <p>恭喜 JABLE 抽中F賞 水蛇監獄</p>
+            <p>恭喜 熊哥哥 抽中SP賞 點點點</p>
+            <p>恭喜 熊寶 抽中C賞 肥臉抱枕</p>
+          </div>
+        </div>
+      </div>
+<div class="hot">
+  <div class="hot-title">
+    <h2>最近熱門</h2>
+  </div>
+  <div class="hot-content">
+    <div class="hot-items">
+      <div class="hot-content1">
+        <div class="hot-content1-img">
+          <img src="玩一番/航海王-新四皇/海賊王一番賞新四皇.jpg" alt="">
+        </div>
+        <div class="hot-content1-text">One Piece</div>
+      </div>
+      <div class="hot-content2">
+        <div class="hot-content2-img">
+          <img src="玩一番/我的英雄學院-兩個人的傾慕/我英.jpg" alt="">
+        </div>
+        <div class="hot-content2-text">My Hero Academia</div>
+      </div>
+      <div >
+        <button class="more-button"onclick="window.location.href='Ichiban.html'">立即探索</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="newsticker-1">
+  <div class="newsticker-content">
+    <div class="marquee-text">
+      <p>恭喜 JABLE 抽中F賞 水蛇監獄</p>
+      <p>恭喜 熊哥哥 抽中SP賞 點點點</p>
+      <p>恭喜 熊寶 抽中C賞 肥臉抱枕</p>
+    </div>
+  </div>
+</div>
+
+<div class="fire">
+  <div class="fire-title">
+    <h2>火熱開抽中</h2>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">popular</button>
+    <div class="dropdown-content">
+      <a href="#">航海王</a>
+      <a href="#">火影忍者</a>
+      <a href="#">獵人</a>
+    </div>
+    <div>
+    </div>
+  </div>
+  <div class="card-shop-container">
+    <div class="card-shop">
+      <div class="card-container" data-url="onepiece.html">
+        <div class="label-block">
+          多抽優惠!
+        </div>
+        <div class="image-block">
+          <img src="玩一番/航海王-新四皇/海賊王一番賞新四皇.jpg" alt="商品圖片">
+        </div>
+        <div class="text-block">
+          <div class="content-block">
+            產品名:<br>
+            ONE PIECE航海王-<br> 
+            新四皇
+          </div>
+          <div class="content-block">
+            店家名:差低玩具
+          </div>
+          <div class="content-block">
+            價格:1抽305元
+        </div>
+      </div>
+      </div>
+      <div class="card-container">
+        <div class="label-block">
+          多抽優惠!
+        </div>
+        <div class="image-block">
+          <img src="玩一番/一番賞 JOJO的奇妙冒險DIAMOND IS UNBREAKABLE/170790989322_1200.jpg" alt="商品圖片">
+        </div>
+        <div class="text-block">
+          <div class="content-block">
+            產品名:<br>
+            JOJO的奇妙冒險-<br>
+            DIAMOND IS UNBREAKABLE<br>
+          </div>
+          <div class="content-block">
+            店家名:虧賊玩具
+          </div>
+          <div class="content-block">
+            價格:1抽300元
+        </div>
+      </div>
+        
+    
+      </div>
+      <div class="card-container">
+        <div class="label-block">
+          多抽優惠!
+        </div>
+        <div class="image-block">
+          <img src="玩一番/JOJO的奇妙冒險 STARDUST CRUSADERS/JOJO一番上.jpg" alt="商品圖片">
+        </div>
+        <div class="text-block">
+          <div class="content-block">
+            產品名:<br>
+            JOJO的奇妙冒險-<br>
+            STARDUST CRUSADERS<br>
+          </div>
+          <div class="content-block">
+            店家名:點點玩具
+          </div>
+          <div class="content-block">
+            價格:1抽350元
+        </div>
+      </div>
+    
+      </div>
+    </div>
+  </div>
+  <div class="card-shop-container">
+    <div class="card-shop">
+      <div class="card-container">
+        <div class="label-block">
+          多抽優惠!
+        </div>
+        <div class="image-block">
+          <img src="玩一番/一番賞 咒術迴戰 懷玉・玉折～參～/170900695984_1200.jpg" alt="商品圖片">
+        </div>
+        <div class="text-block">
+          <div class="content-block">
+            產品名:<br>
+            咒術迴戰 懷玉・玉折<br>～參～
+          </div>
+          <div class="content-block">
+            店家名:虧賊玩具
+          </div>
+          <div class="content-block">
+            價格:1抽300元
+        </div>
+      </div>
+      </div>
+      <div class="card-container">
+        <div class="label-block">
+          多抽優惠!
+        </div>
+        <div class="image-block">
+          <img src="玩一番/HUNTER×HUNTER 獵人 REVENGE OF SCARLET/170899749418_1200.jpg" alt="商品圖片">
+        </div>
+        <div class="text-block">
+          <div class="content-block">
+            產品名:<br>
+            HUNTER×HUNTER 獵人<br>
+            REVENGE OF SCARLET
+          </div>
+          <div class="content-block">
+            店家名:虧賊玩具
+          </div>
+          <div class="content-block">
+            價格:1抽300元
+        </div>
+      </div>
+        
+    
+      </div>
+      <div class="card-container">
+        <div class="label-block">
+          多抽優惠!
+        </div>
+        <div class="image-block">
+          <img src="玩一番/我的英雄學院-兩個人的傾慕/我英.jpg" alt="商品圖片">
+        </div>
+        <div class="text-block">
+          <div class="content-block">
+            產品名:<br>
+            我的英雄學院-<br>
+            兩個人的傾慕
+          </div>
+          <div class="content-block">
+            店家名:虧賊玩具
+          </div>
+          <div class="content-block">
+            價格:1抽300元
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div >
+    <button class="fire-more-button" onclick="window.location.href='Ichiban.html'">查看更多</button>
+  </div>
+</div>
+</main>
+  <footer>
+    <div class="footer-container">
+      <a href="#" class="back-to-top">Back to top</a>
+      <div class="logo-area">
+        <img src="玩一番/LOGO.png" alt="playone">
+      </div>
+      <div class="contact-info">
+        <p class="element-TEL">
+          地址：玩一番股份有限公司 桃園市中壢區復興路46號9樓<br>
+          TEL: 02-222-5978 ｜ FAX: 02-666-5978<br>
+          copyright©2024PLAY ONE 玩一番 . All rights reserved.<br>
+      </p>
+      </div>
+      <div class="social-icons">
+        <a href="#" class="icon-link"><img src="玩一番/icon/fb.ico" alt=""></a>
+        <a href="#" class="icon-link"><img src="玩一番/icon/ig.ico" alt=""></a>
+        <a href="#" class="icon-link"><img src="玩一番/icon/mail.ico" alt=""></a>
+        <a href="#" class="icon-link"><img src="玩一番/icon/yt.ico" alt=""></a>
+      </div>
+    </div>
+    <div class="credits">
+      <div class="overlap-group-2">
+        <div class="text-wrapper-1">參考資料來源: | Pinterest:https://www.pinterest.com/</div>
+          <div class="text-wrapper-2">
+              本網站為緯育TibaMe前端工程師班第xx期學員專題作品，本平台僅供學習、展示之用。
+          </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    let currentIndex = 0;
+
+    function prevSlide() {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateSlider();
+      }
+    }
+
+    function nextSlide() {
+      const totalSlides = document.querySelectorAll('.slider-images img').length;
+      if (currentIndex < totalSlides - 1) {
+        currentIndex++;
+        updateSlider();
+      }
+    }
+
+    function updateSlider() {
+      const sliderImages = document.querySelector('.slider-images');
+      const slideItems = document.querySelectorAll('.slider-images img');
+      const slideWidth = slideItems[0].clientWidth; // 獲取第一張圖片的寬度作為幻燈片的寬度
+      const totalWidth = slideWidth * slideItems.length;
+      
+      sliderImages.style.width = `${totalWidth}px`; // 設置幻燈片容器的寬度
+      sliderImages.style.transform = `translateX(-${currentIndex * slideWidth}px)`; // 使用圖片寬度計算幻燈片的位置
+    }
+    //點擊事件
+    document.addEventListener("DOMContentLoaded", function() {
+  // 獲取所有的 card-container 元素
+  var cards = document.querySelectorAll('.card-container');
+
+  // 為每個 card-container 添加點擊事件
+  cards.forEach(function(card) {
+    card.addEventListener('click', function() {
+      // 從 data-url 屬性獲取 URL
+      var url = card.getAttribute('data-url');
+      // 跳轉到指定的 URL
+      if (url) {
+        window.location.href = url;
+      }
+    });
+  });
+});
+
+    </script>
+</body>
+</html>

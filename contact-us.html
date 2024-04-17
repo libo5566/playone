@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="一番賞,Ichiban Kuji">
+    <meta name="description" content="這是一個線上抽一番賞網站">
+    <link href="玩一番/icon/玩一番.ico" rel="shortcut icon"/>
+    <title>玩一番</title>
+    <!-- 重設css -->
+    <link rel="stylesheet" href="reset.css">
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+body {
+      background-image: url('玩一番/arches.png'); /* 將 'your-image.jpg' 替換為您想要設置的圖片路徑 */
+    }
+.contact-us {
+    font-family: 'Noto Sans TC', sans-serif;  /* 字体设置 */
+    width:800px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px #ccc; /* 盒子阴影 */
+    background-color: aliceblue; /* 背景颜色 */
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.contact-us-title {
+    text-align: center; /* 标题居中 */
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px; /* 标题和表格之间的间隔 */
+    font-size: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 居中表单元素 */
+}
+
+.name, .tel, .email, .question, .option {
+    margin-bottom: 15px; /* 每个输入行之间的距离 */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.contact-us .input-field {
+    width: 600px; /* 确保所有输入框和下拉选单宽度一致 */
+    margin-bottom: 15px; /* 为输入框添加底部边距以达到更好的视觉间隔 */
+    padding: 8px 10px; /* 提供足够的内边距让文本容易阅读 */
+    box-sizing: border-box; /* 确保宽度的计算包括了padding和border */
+}
+
+.contact-us .name .input-field,.contact-us .tel .input-field,.contact-us .email .input-field {
+    width: 600px;
+}
+.option{
+    align-items: center;
+    justify-content: center; 
+    padding-top: 20px;
+}
+.question{
+    margin-bottom: 20px;
+}
+.contact-us .form-group > div,
+.contact-us .form-group label,
+.contact-us .form-group .option {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 居中对齐带有输入框的div */
+    width: 100%; /* 设置宽度为100%以填充父元素的宽度 */
+}
+
+.contact-us .agreetext {
+    display: block; /* 确保同意条款选项独占一行 */
+    margin-top: 20px; /* 添加适当上边距 */
+}
+
+.con-btn-group {
+    margin-top: 20px; /* 增加按钮组的上边距 */
+    display: flex;
+    justify-content: space-around; /* 按钮间距平均分布 */
+}
+.con-btn-group a{
+    text-decoration: none;
+}
+.con-btn {
+    padding: 10px 20px;
+    background-color: #E20000; /* 按钮背景色 */
+    color: white;
+    border-radius: 5px; /* 按钮边角圆滑 */
+    text-align: center;
+    cursor: pointer; /* 鼠标悬停效果 */
+}
+
+.con-btn:hover {
+    background-color: #ba0b0b; /* 按钮悬停时颜色改变 */
+}
+
+.agree {
+    margin-top: 10px; /* 同意条款与其他内容的间隔 */
+}
+
+.agreetext input[type="checkbox"] {
+    margin-right: 10px; /* 复选框与文字的间隔 */
+}
+
+textarea {
+    height: 100px; /* 文本域的高度 */
+    resize: none; /* 禁止调整文本域大小 */
+}
+.agreetext {
+    margin-bottom:30px;
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+<header class="main-header">
+    <!-- 導覽列 -->
+    <div class="container">
+        <div class="logo">
+        <a href=""><img src="玩一番/LOGO.png" alt="playone"></a>
+        </div>
+        <nav class="main-nav">
+        <a href="index.html">首頁</a>
+        <a href="about-us.html">關於我們</a>
+        <a href="news.html">最新消息</a>
+        <a href="Ichiban.html">一番賞</a>
+        <a href="#">盲盒</a>
+        <a href="#">儲值點數</a>
+        <a href="contact-us.html">聯繫客服</a>
+        </nav>
+        <div class="user-options">
+            <a href="#">註冊</a>
+            <a href="login.html">登入</a>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="contact-us">
+        <div class="contact-us-title"><span>聯絡客服</span></div>
+        <div class="form-group">
+            <!-- ----------表格---------- -->
+            <div>
+                <div class="name"><label for="">姓名<br></label></div>
+                <div class="name"><input type="name"class="input-field"></div>
+            </div>
+            <!-- ------------------------ -->
+            <div>
+                <div class="tel"><label for="">連絡電話<br></label></div>
+                <div class="tel"><input type="tel" class="input-field"></div>
+            </div>
+            <!-- ------------------------ -->
+            <div>
+                <div class="email"><label for="">電子信箱<br></label></div>
+                <div class="email"><input type="email"class="input-field"></div>
+            </div>
+            <!-- ------------------------ -->
+            <div class="question"><label for="">詢問主題<br></label></div>
+                <select name="" class="input-field">
+                    <option value="" class="pull
+                ">詢問主題</option>
+                    <option value="" class="pull
+                ">帳號安全</option>
+                <option value="" class="pull
+                ">儲值相關</option>
+                    <option value="" class="pull
+                ">訂單與付款</option>
+                    <option value="" class="pull
+                ">退貨/換貨</option>
+                    <option value="" class="pull
+                ">其他</option>
+                </select>
+            </div>
+
+                <div class="option">
+                    <label for="">問題與意見<br>
+                    </label>
+                </div>
+                <div class="option">
+                    <textarea class="input-field" placeholder="請寫下您的意見..."></textarea>
+                </div>
+                <label for="" class="agreetext">
+                    <input type="checkbox" class="agree">
+                    <span class="agree">同意本網站使用個人資料</span>
+                </label>
+    
+                <!-- ----------按鈕---------- -->
+                <div class="con-btn-group">
+                    <a href="">
+                        <div class="con-btn">
+                            <span>重新填寫</span>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="con-btn">
+                            <span>確認送出</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="footer-container">
+        <a href="#" class="back-to-top">Back to top</a>
+        <div class="logo-area">
+        <img src="玩一番/LOGO.png" alt="playone">
+    </div>
+    <div class="contact-info">
+        <p class="element-TEL">
+        地址：玩一番股份有限公司 桃園市中壢區復興路46號9樓<br>
+        TEL: 02-222-5978 ｜ FAX: 02-666-5978<br>
+        copyright©2024PLAY ONE 玩一番 . All rights reserved.<br>
+    </p>
+    </div>
+    <div class="social-icons">
+        <a href="#" class="icon-link"><img src="玩一番/icon/fb.ico" alt=""></a>
+        <a href="#" class="icon-link"><img src="玩一番/icon/ig.ico" alt=""></a>
+        <a href="#" class="icon-link"><img src="玩一番/icon/mail.ico" alt=""></a>
+        <a href="#" class="icon-link"><img src="玩一番/icon/yt.ico" alt=""></a>
+    </div>
+    </div>
+    <div class="credits">
+    <div class="overlap-group-2">
+        <div class="text-wrapper-1">參考資料來源: | Pinterest:https://www.pinterest.com/</div>
+        <div class="text-wrapper-2">
+            本網站為緯育TibaMe前端工程師班第xx期學員專題作品，本平台僅供學習、展示之用。
+        </div>
+    </div>
+    </div>
+</footer>
+</body>
+</html>

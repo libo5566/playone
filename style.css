@@ -1,0 +1,831 @@
+
+.main-header{
+  background-color: #232732;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+}
+.main-header .container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+.main-header .logo{
+  width: 120px;
+  margin: auto;
+  margin-right: 90px;
+  flex:0 1 auto;
+}
+.main-header .logo img{
+  width: 100%;
+  vertical-align: middle;
+}
+.main-header .main-nav{
+  padding: 5px;
+  flex: 1 1 auto; 
+}
+.main-header .main-nav a{
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 15px;
+  display:inline-block;
+  transition: color 0.3s ease;
+}
+.main-header .main-nav a:hover{
+  transform: translateY(-5px);
+  color: #fc4545;
+}
+.main-header .main-nav a::after{
+  content:'';
+  display: block;
+  height: 2px;
+  width: 0;
+  background: #fff;
+  transition: width 0.2s;
+}
+.main-header .main-nav a:hover::after{
+  width: 100%;
+}
+.main-header .user-options {
+  margin-left: 70px;
+  flex: 0 1 auto;
+}
+.main-header .user-options a{
+  text-decoration: none;
+  color: #232732;
+  background-color: #fff;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+.main-header .user-options a:last-child {
+  margin-left: 0; 
+}
+
+.title {
+	position: relative;
+	overflow: hidden;
+	height: 500px;
+}
+.title img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	filter: brightness(70%) contrast(120%) saturate(120%); }
+.explore-button {
+	position: absolute;
+	bottom: 50px; 
+	right: 200px;
+	padding: 10px 20px;
+	background-color: #232732;
+	color: white;
+	text-decoration: none;
+	font-size: 16px;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+.title-content {
+	font-size: 48px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white; 
+	font-size: 24px; 
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+	line-height: 150%;
+	letter-spacing: 0.2em;
+}
+.image-slider-container {
+  display: flex;
+  position: relative;
+  width: 90%;
+  height: 700px;
+  margin: auto;
+}
+.image-slider {
+  flex:1;
+  display: flex;
+	overflow: hidden;
+	position: relative;
+  width: 100%; 
+	height: 100%;
+}
+
+.slider-images {
+  display: flex; 
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.slider-images img {
+  width: 100%; /* 使圖像填滿其容器 */
+  height: 100%; /* 使圖像填滿其容器 */
+  object-fit: cover; /* 調整圖像的填充方式 */
+  flex-shrink: 0;
+
+}  
+.slide-controls {
+    position: absolute; /* 添加绝对定位 */
+    top: 0;
+    left: 0;
+    height: 100%; /* 保持与父容器高度一致 */
+    width: 100%; /* 覆盖整个滑块区域宽度 */
+    display: flex;
+    flex-direction: row; /* 修改为行方向以便左右布局 */
+    justify-content: space-between; /* 保持默认，以后可能需要调整 */
+    align-items: center; /* 确保按钮垂直居中 */
+    transform: translateY(0); /* 因为您想要充满高度，可能不再需要垂直居中转换 */
+    z-index: 20; /* 确保控制元素位于最上层 */
+}
+.slide-controls .prev,
+.slide-controls .next {
+    position: absolute; /* 使用绝对定位，覆盖相对定位 */
+    top: 50%; /* 垂直居中 */
+    transform: translateY(-50%); /* 确保垂直居中对齐 */
+    background-color: #171515; /* 背景颜色保持 */
+    color: #ffffff; /* 字体颜色保持 */
+    border: none; /* 去边框保持 */
+    width: 6.5%;  /* 设置按钮的宽度 */
+    height: 100%; /* 设置按钮的高度 */
+    background-color: #232732; /* 自定义背景颜色 */
+    color: white; /* 字体颜色 */
+    border: none; /* 无边框 */
+    cursor: pointer; /* 鼠标指针变为可点击状态的指针图标 */
+}
+
+.slide-controls .prev {
+    left: -70px; /* 按钮移除滑块左侧 */
+}
+
+.slide-controls .next {
+    right: -70px; /* 按钮移除滑块右侧 */
+}
+
+
+.newsticker-content {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #ff0000, #f85c5c);
+  overflow: hidden; /* 隐藏超出的部分 */
+}
+
+.marquee-text {
+  display: flex;
+  animation: marquee 30s linear infinite;
+  white-space: nowrap; /* 防止内容换行 */
+}
+
+.newsticker-content p {
+  margin-right: 200px;
+  padding: 20px 0;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+}
+  @keyframes marquee {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+/* 基本樣式 */
+
+.hot {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #232732;
+  min-height: 800px;
+}
+
+.hot-title {
+  position: absolute;
+  top: 40px;
+  left:100px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 36px;
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-thickness: 2px; /* 調整下劃線粗細 */
+  text-underline-offset: 10px; /* 調整下劃線與文字之間的距離 */
+  margin-bottom: 20px;
+}
+
+.hot-content {
+  width: 50vw;
+  height: 90vh; 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color:#fff;
+  padding: 40px;
+  text-align: center;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 添加一些阴影效果 */
+  overflow: hidden; /* 处理任何超出这个容器的内容 */
+  border-radius: 25px;
+  position: relative;
+}
+.hot-content1, .hot-content2 {
+  width: 70%;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc; /* 添加边框样式 */
+  overflow: hidden;
+  transform-origin: center center; /* 确保缩放的中心为容器的中心 */
+  margin:auto;
+}
+.hot-content1 {
+  margin-bottom:20px;  /* 增加额外的底部外边距 */
+  border-radius: 25px;
+}
+
+.hot-content2 {
+  margin-top:30px;  /* 增加额外的顶部外边距 */
+  border-radius: 25px;
+}
+.hot-content1-img img, .hot-content2-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block; /* 解决内联元素下 `position: absolute;` 不起作用的问题 */
+  transition: transform 0.5s ease; /* 添加过渡效果 */
+}
+.hot-content1:hover .hot-content1-img img, 
+.hot-content2:hover .hot-content2-img img {
+  transform: scale(1.1); /* 只放大图片 */
+}
+.hot-content1-text, .hot-content2-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 32px;
+  font-family: "Noto Sans TC", sans-serif;
+}
+.hot-content1-text{
+  background-color :#43b9fa;
+  color:#fff ;
+}
+.hot-content2-text{
+  background-color :#dffd24; 
+}
+.more-button {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  padding: 10px 20px;
+  background-color: #232732;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; /* 鼠标悬停时显示手型光标 */
+}
+/* 火熱開抽區塊 */
+.fire{
+  background-color: #F67C7C;
+  position: relative;
+  padding-bottom: 100px; /* 为fire区块底部添加20px的Padding，可以根据需要调整这个值 */
+}
+.fire-title {
+  position: absolute;
+  top: 20px;
+  left: 100px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 36px;
+  color: #000000;
+  text-decoration: underline;
+  text-decoration-thickness: 2px; /* 調整下劃線粗細 */
+  text-underline-offset: 10px; /* 調整下劃線與文字之間的距離 */
+  margin-bottom: 100px;
+}
+.dropbtn {
+  position: absolute;
+  background-color: #232732;
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  right: 120px; /* 调整这个值来指定距离右侧的距离 */
+  top: 20px;
+  border-radius: 5px;
+  width: 80px; /* 添加宽度样式 */
+  height: 40px; /* 添加高度样式 */
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 40px;
+  top: 55px;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #fff; /* 修改链接文本颜色为白色 */
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  background-color: #232732;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+  color: #232732; /* 修改鼠标悬停时的文本颜色 */
+}
+
+/* 下拉效果 */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* 選項之間的間距 */
+.dropdown-content a + a {
+  border-top: 1px solid #ddd;
+}
+.label-block {
+  position: absolute;
+  background-color: #FBDE57;
+  top:-25px;
+  left: -20px;
+  padding: 5px 10px;
+}
+
+.label-block::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 0px;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid rgb(188, 188, 2);
+  display: block;
+}
+.card-shop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  height: auto;
+}
+
+.card-container {
+  position: relative;
+  width: 280px;
+  height: 320px;
+  padding: 20px;
+  margin: 0 25px;
+  background-color: #E20000;
+  text-align: center;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.image-block {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.image-block img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px; /* 让图片宽度充满父容器 */
+  height: 200px; /* 让高度充满父容器 */
+  object-fit: cover; /* 保持图片比例并覆盖整个框 */
+}
+.text-block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 16px;
+}
+
+.content-block {
+  width: 100%;
+  text-align: left;
+  padding: 5px 0;
+}
+.content-block:nth-child(1) {
+  flex: 0 0 100%; /* 宽度为100% */
+}
+
+.content-block:nth-child(2), .content-block:nth-child(3) {
+  flex: 0 0 50%; /* 宽度为48% */
+}
+.content-block:nth-child(3) {
+  text-align: right; /* 文本右对齐 */
+}
+.fire-more-button{
+  position: absolute;
+  bottom: 20px;
+  right: 100px;
+  padding: 10px 20px;
+  background-color: #232732;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; /* 鼠标悬停时显示手型光标 */
+}
+
+
+
+/* footer區域 */
+footer {
+  background-color:#232732;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+}
+.back-to-top {
+  position: absolute; /* 使用绝对定位 */
+  top: 0; /* 按钮距离顶部的距离 */
+  right: 0; /* 按钮距离右侧的距离 */
+  padding: 10px; /* 调整按钮的内边距 */
+  background-color: #ccc; /* 按钮的背景颜色 */
+  color: #fff; /* 按钮的文字颜色 */
+}
+.back-to-top::before {
+  content: '\2191'; /* 使用Unicode字符来表示向上箭头 */
+  display: inline-block;
+  transform: translateY(1px); /* 调整垂直对齐位置 */
+  margin-right: 5px; /* 可根据需要调整箭头与文字的间距 */
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-bottom: 1px solid #fff;
+  margin-right: 60px;
+}
+.logo-area{
+  width: 150px;
+}
+.logo-area img {
+  width:100%; /* 设置 logo 区域的宽度 */
+  /* 排列 logo 区域中的元素，设置 logo 居中 */
+}
+
+.contact-info {
+  text-align: center;
+  max-width: 100%; /* 根据需要调整适应布局 */
+}
+
+.social-icons {
+  width: 100px; /* 设置 social-icons 区域的宽度 */
+  /* 排列 social-icons 区域中的元素，设置图标居中 */
+  display: flex; /* 利用 Flex 布局 */
+  justify-content: flex-start; /* 从左到右排列 */
+  align-items: center;
+}
+.icon-link{
+  position: relative; 
+  padding: 0 10px; /* 设置图标之间的间距 */
+}
+
+.overlap-group-2 {
+  display: flex; /* 使用 Flex 布局 */
+  justify-content: space-between; /* 左右两边对齐 */
+  border-top: 1px solid #fff; /* 添加一条白色实线在上方 */
+  padding-top: 10px; /* 上方留出一些空间 */
+}
+.credits {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.text-wrapper-1 {
+  padding-left: 150px; /* 设置距离左边的距离为150px */
+}
+
+.text-wrapper-2 {
+  padding-right: 100px; /* 设置距离右边的距离为150px */
+}
+
+/* news */
+.newsA{
+  margin-bottom: 100px; /* 为newsA区块添加下方外边距来与底部导航栏留出一定的间距 */
+}
+.news-title {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 36px;
+  color: #000000;
+  text-decoration: underline;
+  text-decoration-thickness: 2px; /* 調整下劃線粗細 */
+  text-underline-offset: 10px; /* 調整下劃線與文字之間的距離 */
+  text-align: center;
+  padding-top:50px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.news-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1000px;
+  margin: 0 auto;
+  border: 1px solid #000000; /* 设置1像素粗的黑色实线边框 */
+  border-radius: 10px;
+  margin-bottom: 30px
+}
+.news-image{
+  flex: 1;
+  margin-right: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.news-image img {
+  max-width: 100%; /* 图像最大宽度为其容器的100% */
+  height: auto; /* 保持宽高比 */
+  margin: 0;
+  border: none;
+}
+.news-content {
+  flex: 1;
+  padding: 20px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.news-content label  {
+  width: 100%; /* 让每个元素自动占满一行 */
+  margin-bottom: 10px; /* 下方留出一定间距 */
+  color: #8A8585;
+}
+.news-title-time {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.news-title-time h3 {
+  font-size: 24px;
+}
+.news-title-time span {
+  text-align: right;
+  font-size: 16px;
+}
+.news-content h3,
+.news-content span {
+  flex: 1;
+}.news-content p {
+  letter-spacing:1.5px;  /* 设置文字间距为1像素，根据需要调整数值 */
+}
+.news-pagination {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+}
+
+.page {
+  width: 25px; /* 方块宽度 */
+  height: 25px; /* 方块高度 */
+  background: #fff; /* 默认背景颜色 */
+  margin: 0 5px; /* 间距 */
+  text-align: center;
+  line-height: 25px;
+  cursor: pointer;
+  border-radius: 2px;
+  margin: 10px;
+  border: 1px solid #000000;
+}
+
+.page.active {
+  background: #ff0000; /* 设置当前页的特殊颜色 */
+  color: #fff;
+  border:none;
+}
+/* aboutus */
+.about-title {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 36px;
+  color: #000000;
+  text-decoration: underline;
+  text-decoration-thickness: 2px; /* 調整下劃線粗細 */
+  text-underline-offset: 10px; /* 調整下劃線與文字之間的距離 */
+  text-align: center;
+  padding-top:50px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.about-section {
+  width: 80%;
+  padding: 50px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #f2f2f2;
+  margin-bottom: 50px;
+}
+
+.about-section p {
+  font-size: 18px;
+  line-height: 1.6; /* 調整行高 */
+  letter-spacing: 1px; /* 調整字距 */
+  width: 80%; /* 設定寬度為80% */
+  margin: 0 auto;  /* 讓段落置中 */
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.about-section img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+/* ichiban */
+.main-ichiban {
+  width: 100%;          /* 调整为根据您的布局需求设置宽度 */
+  margin: 0 auto;      /* 居中显示 */
+  text-align: center;  /* 中心对齐文本，以便按钮也能居中 */
+}
+.ichiban-title {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 36px;
+  color: #000000;
+  text-decoration: underline;
+  text-decoration-thickness: 2px; /* 調整下劃線粗細 */
+  text-underline-offset: 10px; /* 調整下劃線與文字之間的距離 */
+  text-align: center;
+  padding-top:50px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.search-box {
+  position: absolute;/* 絕對定位搜尋框 */
+  right: 105px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.ichiban-button-group {
+  margin-top: 20px; /* 从标题到按钮的距离 */
+  text-align: center;
+}
+.ichiban-button-group .choice-button {
+  width: 150px; /* 設定每個按鈕的寬度為 150px */
+  width: 20%;
+  margin: 0 30px; /* 在按鈕之間添加水平間隙 */
+  border-radius: 10px;
+}
+.ichiban-button-group .choice-button:first-child {
+  background-color: yellow;
+  color:#232732 ;
+}
+
+.choice-button {
+  background-color: white; /* 默认背景色 */
+  border: 1px solid black; /* 边界 */
+  padding: 10px 20px; /* 内边距 */
+  margin: 0 10px; /* 按钮之间的间隔 */
+  cursor: pointer; /* 鼠标悬停时显示指针 */
+}
+
+.choice-button.active {
+  background-color: yellow; /* 激活状态下的背景色 */
+}
+.ichiban-card-shop-container {
+  margin-bottom: 50px; /* 添加底部外邊距 */
+}
+.ichiban-card-shop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  height: auto;
+}
+.ichiban-label-block {
+  position: absolute;
+  background-color: #FBDE57;
+  top:-25px;
+  left: -20px;
+  padding: 5px 10px;
+}
+
+.ichiban-label-block::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 0px;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid rgb(188, 188, 2);
+  display: block;
+}
+
+.ichiban-card-container {
+  position: relative;
+  width: 280px;
+  height: 320px;
+  padding: 20px;
+  margin: 0 25px;
+  background-color: #E20000;
+  text-align: center;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ichiban-image-block {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.ichiban-image-block img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* 让图片宽度充满父容器 */
+  height: 100%; /* 让高度充满父容器 */
+  object-fit: cover; /* 保持图片比例并覆盖整个框 */
+}
+.ichiban-text-block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 16px;
+}
+
+.ichiban-content-block {
+  width: 100%;
+  text-align: left;
+  padding: 5px 0;
+}
+.ichiban-content-block:nth-child(1) {
+  flex: 0 0 100%; /* 宽度为100% */
+  padding-bottom: 20px;
+}
+
+.ichiban-content-block:nth-child(2), .ichiban-content-block:nth-child(3) {
+  flex: 0 0 50%; /* 宽度为48% */
+}
+.ichiban-content-block:nth-child(3) {
+  text-align: right; /* 文本右对齐 */
+}
+.ichiban-card-shop-container .ichiban-card-shop:nth-child(4) {
+  margin-bottom: 50px; /* 設置底部外邊距為10px */
+}
+
+/* #contact-us */
