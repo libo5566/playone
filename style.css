@@ -153,7 +153,6 @@
     position: absolute; /* 使用绝对定位，覆盖相对定位 */
     top: 50%; /* 垂直居中 */
     transform: translateY(-50%); /* 确保垂直居中对齐 */
-    background-color: #171515; /* 背景颜色保持 */
     color: #ffffff; /* 字体颜色保持 */
     border: none; /* 去边框保持 */
     width: 6.5%;  /* 设置按钮的宽度 */
@@ -291,7 +290,7 @@
   color:#fff ;
 }
 .hot-content2-text{
-  background-color :#dffd24; 
+  background-color :#FBDE57; 
 }
 .more-button {
   position: absolute;
@@ -307,7 +306,7 @@
 }
 /* 火熱開抽區塊 */
 .fire{
-  background-color: #F67C7C;
+  background-color: #D14F4F;
   position: relative;
   padding-bottom: 100px; /* 为fire区块底部添加20px的Padding，可以根据需要调整这个值 */
 }
@@ -656,7 +655,7 @@ footer {
   padding: 50px;
   margin: 0 auto;
   text-align: center;
-  background-color: #f2f2f2;
+  background-color: aliceblue;
   margin-bottom: 50px;
 }
 
